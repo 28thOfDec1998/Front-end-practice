@@ -9,13 +9,14 @@
     --primary:  hsl(25, 97%, 53%);
     --white: hsl(0, 0%, 100%);
     --medium_grey: hsl(216, 12%, 54%);
-    --dark_blue: hsl(213, 19%, 18%);
+    --dark_blue: #252D37;
     --darker_blue: hsl(216, 12%, 8%);
     --light_grey: hsl(217, 12%, 63%); 
+    --img_background:#2E353D;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { font-size: 14px; text-align: center; color: var(--white); margin-top: 2rem;}
+.attribution a { color: hsl(228, 58%, 67%); }
 
 body{
     font-family: 'Montserrat', sans-serif;
@@ -30,55 +31,127 @@ body{
     background-color: var(--darker_blue);
 }
 
-.rating_card{
+.hidden{
+    display: none;
+}
+
+.rating_card, .thanks_card{
     background-color: var(--dark_blue);
-    width: 350px;
+    max-width: 350px;
     padding: 2rem;
     border-radius: 15px;
 }
 
 .rating_card img{
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: var(--img_background);
+    border-radius: 50%;
 }
 
 .rating_card h2{
     color: var(--white);
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 .rating_card p{
     color: var(--medium_grey);
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     font-size: 15px;
 }
 
-.rating_card span{
-    background-color: var(--medium_grey);
-    padding: 10px;
-    margin: 10px;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
+.rating_card ul{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
 }
 
-.rating_card button{
+.rating_card ul li{
+    list-style: none;
+}
+
+.rating_card ul li .btn{
+    background-color: var(--img_background);
+    border-radius: 50%;
+    border-style: none;
+    padding: 1rem 1.2rem;
+    cursor: pointer;
+    color: var(--medium_grey);
+}
+
+.rating_card .btn:hover{
+    color: var(--white);
+    background-color:var(--primary) ;
+}
+
+.rating_card .btn:active{
+    /*  /* Scaling button to 0.98 to its original size */ 
+    transform: scale(0.98);
+}
+
+.rating_card .btn:focus{
+    color: var(--white);
+    background-color: var(--light_grey);
+}
+
+.rating_card .submit_btn{
     margin-top: 15px;
     background-color: var(--primary);
     color: var(--white);
     width: 100%;
-    padding: 20px;
+    padding: 18px;
     border-style: none;
     border-radius: 25px;
     font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     font-weight: 700;
     cursor: pointer;
 }
 
-.rating_card button:active{
+.rating_card .submit_btn:hover{
+    color: var(--primary);
+    background-color: var(--white);
+    transition: .60s;
+}
+
+.rating_card .submit_btn:active{
     /*  /* Scaling button to 0.98 to its original size */ 
     transform: scale(0.98);
 }
+
+.thanks_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.thanks_card img{
+    display: block;
+    margin: 1rem auto;
+}
+
+.thanks_card p.rate{
+    color: var(--primary);
+    background-color: var(--img_background);
+    padding: .50rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.thanks_card h2{
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.thanks_card p{
+    color: var(--light_grey);
+    margin-bottom: 1rem;
+}
+
+
 
 
