@@ -31,9 +31,7 @@ body{
     background-color: var(--darker_blue);
 }
 
-.hidden{
-    display: none;
-}
+
 
 .rating_card, .thanks_card{
     background-color: var(--dark_blue);
@@ -152,6 +150,9 @@ body{
     margin-bottom: 1rem;
 }
 
+.hidden{
+    display: none;
+}
 
 
 
